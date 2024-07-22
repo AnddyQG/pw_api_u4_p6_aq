@@ -3,7 +3,8 @@
         <formulario/>
         
         <div class="botones">
-        <button >Guardar</button>
+
+
         </div>
 
 
