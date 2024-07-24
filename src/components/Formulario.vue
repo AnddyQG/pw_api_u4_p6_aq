@@ -34,6 +34,8 @@
   
       <button v-on:click="consultar">Consultar</button>
       <button v-on:click="actualizar">Actualizar</button>
+      <button v-on:click="guardar">Guardar</button>
+      <button v-on:click="eliminar">Eliminar</button>
     </div>
   </template>
   
@@ -41,10 +43,23 @@
   import {
     obtenerPorCedulaFachada,
     actualizarFachada,
+    guardarFachada,
+    eliminarFachada,
   } from "../clients/clientEstudiante.js";
   
   export default {
     methods: {
+     async guardar(){
+        const bodyEstudiante = {
+          nombre: this.nombre,
+          apellido: this.apellido,
+          fecha: this.fecha,
+          genero: this.genero,
+          cedula: this.cedula,
+        };
+        const data = await guardarFachada(bodyEstudiante);
+        console.log(data);
+      },
       async consultar() {
         console.log(this.cedula);
   
@@ -57,6 +72,11 @@
         this.nombre = data.nombre;
         this.apellido = data.apellido;
       },
+
+      async eliminar(){
+        const data = await eliminarFachada(this.cedula);
+        this.cedula = data.cedula;
+      },
   
       async actualizar() {
         console.log("Actualizar");
@@ -68,7 +88,7 @@
         const bodyEstudiante = {
           nombre: this.nombre,
           apellido: this.apellido,
-          fecha: fechafinal,
+          fecha: this.fecha,
           genero: this.genero,
           cedula: this.cedula,
         };
@@ -99,9 +119,9 @@
     margin: 0 auto;
     max-width: 600px;
     padding: 20px;
-    border: 2px solid #eaeaea;
+    border: 2px solid #000000;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #000000;
   }
   
   .form-title {
