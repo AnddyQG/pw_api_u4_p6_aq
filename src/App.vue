@@ -1,27 +1,32 @@
 <template>
-  <div class="container">
-    <p1/>
-  </div>
+  <!-- <BienvenidaaPage /> -->
+  <router-view />
+  <!-- <EstudiantePage /> -->
+  <!-- <EstudianteEliminar /> -->
+  <!-- <EstudianteGuardar /> -->
 </template>
 
 <script>
-import p1 from './pages/EstudianteActua.vue'
-import p2 from './pages/EstudianteEliminar.vue'
-import p3 from './pages/EstudianteGuardar.vue'
+import BienvenidaPage from "./pages/BienvenidaPage.vue";
+// import EstudiantePage from "./pages/EstudiantePage.vue";
+// import EstudianteEliminar from "./pages/EstudianteEliminar.vue";
+// import EstudianteGuardar from "./pages/EstudianteGuardar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    p1,
-    p2,
-    p3
+    BienvenidaPage,
+    // EstudiantePage,
+    // EstudianteEliminar,
+    // EstudianteGuardar,
   }
-}
+};
+
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
