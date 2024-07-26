@@ -1,4 +1,5 @@
 <template>
+  <NavBar/>
   <!-- <BienvenidaaPage /> -->
   <router-view />
   <!-- <EstudiantePage /> -->
@@ -7,20 +8,16 @@
 </template>
 
 <script>
-import BienvenidaPage from "./pages/BienvenidaPage.vue";
-// import EstudiantePage from "./pages/EstudiantePage.vue";
-// import EstudianteEliminar from "./pages/EstudianteEliminar.vue";
-// import EstudianteGuardar from "./pages/EstudianteGuardar.vue";
 
-export default {
-  name: "App",
-  components: {
-    BienvenidaPage,
-    // EstudiantePage,
-    // EstudianteEliminar,
-    // EstudianteGuardar,
-  }
-};
+
+import NavBar from "../src/components/NavBar.vue";
+ export default{
+
+    name: "App",
+    components: { 
+        NavBar, }
+
+ };
 
 </script>
 
@@ -30,7 +27,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #afb6bdbd;
   margin-top: 60px;
 }
 </style>

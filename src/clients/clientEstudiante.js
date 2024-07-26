@@ -4,8 +4,8 @@ import axios from "axios";
 
 //de forma tradicional
 const obtenerPorCedula = async (cedula) => {
-    const data = await fetch(`http://localhost:8082/API/v1.0/Matricula/estudiantes/cedula/${cedula}`)
-        .then((response) => response.json());
+    const data = await fetch(`http://localhost:8082/API/v1.0/Matricula/estudiantes/${cedula}`)
+        .then((response) => response.data);
     console.log(data);
     return data;
 }

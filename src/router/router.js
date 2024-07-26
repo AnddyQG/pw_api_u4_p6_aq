@@ -4,11 +4,12 @@ import EstudianteMain from '../pages/EstudianteMain.vue'
 import EstudianteEliminar from '../pages/EstudianteEliminar.vue'
 import EstudianteGuardar from '../pages/EstudianteGuardar.vue'
 import BienvenidaPage from '../pages/BienvenidaPage.vue'
-
+import NotFoundPage from '../pages/NotFoundPage.vue'
 // Declarar arreglo de objetos que representarán alas pfj
 const routes = [
+  
     {
-        path: '/buscar',
+        path: '/buscar/:id',
         component: EstudianteMain
     },
 
@@ -25,6 +26,10 @@ const routes = [
     {
         path: '/',
         component: BienvenidaPage
+    },
+    {
+        path:'/:pathMatch(.*)*',
+        component: NotFoundPage
     }
 
 ]

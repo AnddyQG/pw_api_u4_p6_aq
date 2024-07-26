@@ -38,8 +38,22 @@ methods: {
         console.log(this.cedula);
      const data=   await obtenerPorCedulaAxiosFachada(this.cedula);
      console.log(data);
+   
+     
+
+    }
+    ,
+    created(){
+        console.log(this.$route)
+    console.log(this.$route.params.cedula)
+    if(this.$route.params.cedula !== 'vacio'){
+        this.cedula=this.$route.params.cedula;
+        consultar();
     }
 }
+},
+
+
 };
 </script>
 

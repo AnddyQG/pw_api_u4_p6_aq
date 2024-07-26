@@ -30,7 +30,7 @@
 }
 
 body {
-    background: #101a1c;
+    background: #3a2323;
 }
 
 /* Atributo de tipo pseudoclase */
