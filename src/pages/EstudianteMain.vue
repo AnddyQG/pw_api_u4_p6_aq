@@ -30,7 +30,7 @@ import {obtenerPorCedulaAxiosFachada,actualizarFachada} from '../clients/clientE
 export default{
     data(){
         return{
-            cedula:null,
+            cedula:''
         }
 },
 methods: {
@@ -48,7 +48,7 @@ methods: {
     console.log(this.$route.params.cedula)
     if(this.$route.params.cedula !== 'vacio'){
         this.cedula=this.$route.params.cedula;
-        consultar();
+        this.consultar();
     }
 }
 },
